@@ -1,0 +1,337 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: white;
+    /* height: 100vh */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Optimistic Display", -apple-system, ui-sans-serif, system-ui,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    overflow: hidden;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, #0b2469, #000000);
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+header {
+    height: 4rem;
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid white;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.1px);
+    -webkit-backdrop-filter: blur(8.1px);
+    border-bottom: 1px solid rgba(19, 58, 202, 0.2);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 15px;
+    transition: border-bottom 0.3s ease;
+}
+.logo {
+    width: 2rem;
+    height: 2rem;
+    background-image: url("/Users/azizali/Desktop/JavaScript-React-Project/js-final-project/public/icons/react-final-project-logo.png");
+    background-position: center;
+    background-size: 140%;
+    background-repeat: no-repeat;
+}
+.menu_part__header a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease, color 0.3s;
+}
+
+/* Эффект наведения для ссылок в меню */
+.menu_part__header a:hover {
+    transform: scale(1.05); /* Мягкое увеличение */
+    color: #caa113;
+}
+
+.parallax_background {
+    background: linear-gradient(to bottom, #0b2469, #000000);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.parallax {
+    display: grid;
+    grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+    background: rgba(19, 58, 202, 0.41);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8.1px);
+    -webkit-backdrop-filter: blur(8.1px);
+    border: 1px solid rgba(19, 58, 202, 0.07);
+}
+.parallax_back_none {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(19, 58, 202, 0.07);
+}
+.contacts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+.social-networks-footer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.logo_part__header {
+    width: 25%;
+    height: 100%;
+}
+.menu_part__header {
+    width: 40%;
+    height: 100%;
+}
+.other_part__header {
+    width: 25%;
+    height: 100%;
+}
+a {
+    font-family: "Optimistic Display", -apple-system, ui-sans-serif, system-ui,
+        sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    text-decoration: none;
+    color: white;
+}
+h1 {
+    font-size: 48px;
+    color: #caa113;
+}
+.meet_part__content {
+    height: 10rem;
+    text-align: center;
+    line-height: 1.375;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.welcome_part__content {
+    width: 100vh;
+    height: 8rem;
+    text-align: center;
+    line-height: 1.375;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.meet_part__content p,
+.welcome_part__content p {
+    font-size: 34px;
+}
+.button a,
+.welcome_part__content a {
+    font-size: 20px;
+    font-weight: 700;
+    outline: 2px solid;
+    outline-color: white;
+    width: 40%;
+    padding: 0.75rem 2rem 0.75rem 2rem;
+    border-radius: 9999px;
+    position: relative;
+    transition: all 550ms cubic-bezier(0.36, 0.63, 0.5, 0.73);
+}
+.button a:hover,
+.welcome_part__content a:hover {
+    box-shadow: 0 0 0 2px #caa113;
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+    color: #caa113;
+}
+.button {
+    margin-top: 1.25rem;
+}
+.content {
+    text-align: center;
+}
+
+.a_github {
+    height: 2rem;
+    width: 2rem;
+    background: url("/Users/azizali/Desktop/JavaScript-React-Project/js-final-project/public/icons/github-logo-light.png");
+    background-position: center;
+    background-size: 145%;
+    border-radius: 50%;
+}
+/*  
+
+
+
+*/
+
+.opportonuties_part__content {
+    font-size: 24px;
+    color: #fff;
+    grid-row: 2 / -2;
+    grid-column: 2 / -2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    align-items: center;
+}
+.animated-block {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1.5s ease-out, transform 1s ease-out;
+}
+.animated-block.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.animated-block-section {
+    height: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+.animated-block-section-1-opportonuties-part {
+    gap: 2rem;
+}
+.h2-animated-card,
+.flip-card-back p {
+    padding: 0 20px;
+    margin: 0;
+}
+.flip-card {
+    perspective: 1000px;
+    height: 90%;
+    width: 90%;
+
+    position: relative;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #caa113;
+    border-radius: 15px;
+    text-align: left;
+}
+
+.flip-card-front {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 26px;
+}
+#instagram-logo-footer {
+    height: 1.4rem;
+    width: 1.4rem;
+}
+#github-logo-footer {
+    height: 2rem;
+    width: 2rem;
+}
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.create-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #113caa76;
+
+    backdrop-filter: blur(8.1px);
+
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.create-page h1,
+.create-page h2 {
+    text-align: center;
+}
+
+.create-page input {
+    width: calc(33.3% - 10px);
+    padding: 10px;
+    margin: 10px 5px 10px 0;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.education-entry {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.education-entry input {
+    width: calc(33.3% - 10px);
+}
+
+.education-entry button {
+    margin-left: 10px;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
